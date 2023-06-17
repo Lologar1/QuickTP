@@ -1,4 +1,5 @@
 package me.analyzers.quicktp.commands;
+import org.bukkit.ChatColor;
 import org.bukkit.Color;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
@@ -12,10 +13,12 @@ public class QuickTP implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(!(sender instanceof Player)){
             System.out.println("Sender must be a player!");
+            return true;
         }
         Player player = (Player) sender;
         if(args.length < 1){
-            player.sendMessage(Color.RED + "Must provide at least one valid numerical argument!");
+            player.sendMessage(ChatColor.RED + "Must provide at least one valid numerical argument!");
+            return true;
         }
         int distance = Integer.parseInt(args[0]);
         Vector direction = player.getLocation().getDirection();

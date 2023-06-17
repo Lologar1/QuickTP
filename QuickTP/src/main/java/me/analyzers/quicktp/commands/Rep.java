@@ -16,6 +16,7 @@ public class Rep implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(!(sender instanceof Player) || args.length < 1){
             sender.sendMessage(Color.RED + "Please provide one valid numerical argument (0 or 1)");
+            return true;
         }
         Player player = (Player) sender;
         if(args[0].equals("1")){
@@ -24,6 +25,7 @@ public class Rep implements CommandExecutor {
             player.getInventory().addItem(new ItemBuilder(Material.REPEATER).setAmount(1).setDisplayName(ChatColor.RED + "Redstone Repeater").addLore(ChatColor.GRAY + "Locked repeater").setPDC("power", "false").build());
         }else{
             sender.sendMessage(Color.RED + "Please provide one valid numerical argument (0 or 1)");
+            return true;
         }
         return true;
     }
