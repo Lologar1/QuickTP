@@ -1,0 +1,6 @@
+name: AnaUtils
+version: '1.0-SNAPSHOT'
+main: me.analyzers.anautils.AnaUtils
+api-version: 1.18
+authors: [ Analyzers ]
+description: Analyzers' Utilities

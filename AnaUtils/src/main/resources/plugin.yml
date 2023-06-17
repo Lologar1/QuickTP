@@ -1,0 +1,6 @@
+name: AnaUtils
+version: '${project.version}'
+main: me.analyzers.anautils.AnaUtils
+api-version: 1.18
+authors: [ Analyzers ]
+description: Analyzers' Utilities
