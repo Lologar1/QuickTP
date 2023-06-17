@@ -1,0 +1,13 @@
+name: QuickTP
+version: '1.0-SNAPSHOT'
+main: me.analyzers.quicktp.QuickTP
+api-version: 1.18
+authors: [ Analyzers ]
+description: QuickTeleport plugin for the ORE server
+commands:
+  quicktp:
+    description: Teleports you forward X blocks!
+    aliases: qtp
+  rep:
+    description: Gives a locked repeater that is powered or unpowered
+    aliases: getrep
